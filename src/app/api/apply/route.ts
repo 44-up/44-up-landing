@@ -58,7 +58,8 @@ export async function POST(request: NextRequest) {
             portfolio,
             resumeFileName: resume.name,
             resumeSize: resume.size,
-            coverLetterLength: coverLetter.length,
+            coverLetterLength:
+                typeof coverLetter === 'string' ? coverLetter.length : 0,
         });
 
         // Return success response
