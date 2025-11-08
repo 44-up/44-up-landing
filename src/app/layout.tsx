@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import SmoothScroll from '@/components/SmoothScroll';
-import ViewportHeightLock from '@/components/ViewportHeightLock';
 
 const geistSans = Geist({
     variable: '--font-geist-sans',
@@ -39,7 +38,7 @@ export default function RootLayout({
             <head>
                 <meta
                     name='viewport'
-                    content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover'
+                    content='width=device-width, initial-scale=1'
                 />
                 <link rel='icon' href='/logo.svg' type='image/svg+xml' />
                 <link rel='shortcut icon' href='/logo.svg' />
@@ -48,7 +47,6 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <ViewportHeightLock />
                 <SmoothScroll>{children}</SmoothScroll>
             </body>
         </html>

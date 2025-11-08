@@ -16,12 +16,6 @@ export default function SmoothScroll({
         // Only initialize on desktop for better performance
         if (typeof window === 'undefined') return;
 
-        // Disable on mobile devices to prevent zoom issues
-        const isMobile =
-            /iPhone|iPad|iPod|Android/i.test(navigator.userAgent) ||
-            window.innerWidth < 768;
-        if (isMobile) return;
-
         // Check if user prefers reduced motion
         const prefersReducedMotion = window.matchMedia(
             '(prefers-reduced-motion: reduce)'

@@ -124,17 +124,8 @@
     * {
         @apply border-border outline-ring/50;
     }
-    html {
-        touch-action: pan-y;
-        -webkit-tap-highlight-color: transparent;
-    }
     body {
         @apply bg-background text-foreground;
-        touch-action: pan-y;
-        -webkit-overflow-scrolling: touch;
-    }
-    :root {
-        --app-height: 100vh;
     }
 }
 
@@ -142,13 +133,5 @@
     .animate-scroll {
         animation: scroll var(--animation-duration, 40s)
             var(--animation-direction, forwards) linear infinite;
-    }
-    .h-dvh {
-        height: 100dvh;
-        height: var(--app-height, 100vh);
-    }
-    .min-h-dvh {
-        min-height: 100dvh;
-        min-height: var(--app-height, 100vh);
     }
 }
