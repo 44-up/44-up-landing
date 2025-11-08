@@ -9,15 +9,33 @@ import { Menu, X, Mail } from 'lucide-react';
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isHeaderVisible, setIsHeaderVisible] = useState(true);
     const scrollPositionRef = useRef(0);
+    const lastScrollY = useRef(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
+            const scrollDifference = scrollPosition - lastScrollY.current;
+
             setIsScrolled(scrollPosition > 0);
+
+            // Hide header when scrolling down, show when scrolling up
+            // Also show header when at the top of the page
+            if (scrollPosition < 10) {
+                setIsHeaderVisible(true);
+            } else if (scrollDifference > 5) {
+                // Scrolling down
+                setIsHeaderVisible(false);
+            } else if (scrollDifference < -5) {
+                // Scrolling up
+                setIsHeaderVisible(true);
+            }
+
+            lastScrollY.current = scrollPosition;
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
@@ -60,7 +78,7 @@ export default function Header() {
                     isScrolled
                         ? 'bg-white/90 backdrop-blur-md border-b border-white/20'
                         : 'bg-transparent'
-                }`}
+                } ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
                 style={{ willChange: 'transform' }}
             >
                 <div className='max-w-7xl mx-auto px-4 py-6'>
