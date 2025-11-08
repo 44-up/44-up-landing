@@ -16,13 +16,13 @@ export default function HeroSection() {
 
         const handleVideoEnd = () => {
             // Rotate between video2 and video1
-            setCurrentVideo((prev) => 
+            setCurrentVideo((prev) =>
                 prev === '/video2.mp4' ? '/video1.mp4' : '/video2.mp4'
             );
         };
 
         video.addEventListener('ended', handleVideoEnd);
-        
+
         // Ensure video plays when source changes
         video.load();
         video.play().catch(() => {});
@@ -75,7 +75,7 @@ export default function HeroSection() {
             <div className='max-w-7xl mx-auto px-4 py-20 relative z-10'>
                 <div className='text-center'>
                     <ScrollAnimation delay={0.1}>
-                        <Badge className='mb-8 bg-orange-500/20 text-gray-800 border border-orange-300 backdrop-blur-sm px-6 py-2 text-sm font-medium shadow-lg'>
+                        <Badge className='mb-8 bg-orange-500/20 text-gray-800 border border-orange-300 backdrop-blur-sm px-6 py-2 text-sm font-medium shadow-lg hidden md:inline-block'>
                             🚀 Your Digital Transformation Partner
                         </Badge>
                     </ScrollAnimation>
@@ -91,9 +91,9 @@ export default function HeroSection() {
 
                     <ScrollAnimation delay={0.4}>
                         <div className='flex flex-col sm:flex-row gap-6 justify-center mb-16'>
-                            <a 
-                                href='https://calendly.com/44up-info/30min' 
-                                target='_blank' 
+                            <a
+                                href='https://calendly.com/44up-info/30min'
+                                target='_blank'
                                 rel='noopener noreferrer'
                             >
                                 <Button
