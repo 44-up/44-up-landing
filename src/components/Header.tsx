@@ -140,12 +140,16 @@ export default function Header() {
 
             {/* Mobile Menu Drawer */}
             <div
-                className={`fixed top-0 right-0 h-screen w-80 max-w-[85vw] z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden ${
+                className={`fixed top-0 right-0 w-80 max-w-[85vw] z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden flex flex-col ${
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
-                style={{ height: '100dvh' }}
+                style={{
+                    height: '100dvh',
+                    paddingTop: 'env(safe-area-inset-top)',
+                    paddingBottom: 'env(safe-area-inset-bottom)',
+                }}
             >
-                <div className='flex flex-col h-full'>
+                <div className='flex flex-col flex-1 min-h-0'>
                     {/* Mobile Menu Header */}
                     <div className='flex items-center justify-between p-6 border-b border-gray-200'>
                         <Link href='/' onClick={closeMenu}>
