@@ -58,7 +58,7 @@ export default function AIChatbotSection() {
                     </ScrollAnimation>
                     <ScrollAnimation delay={0.2}>
                         <h2 className='text-5xl md:text-6xl font-bold text-white mb-8'>
-                            Bespoke Software That
+                            Software That
                             <span className='bg-gradient-to-r from-blue-300 via-orange-300 to-pink-300 bg-clip-text text-transparent block'>
                                 Transforms Customer Experience
                             </span>
