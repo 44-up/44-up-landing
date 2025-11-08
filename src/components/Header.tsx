@@ -43,9 +43,6 @@ export default function Header() {
                         ? 'bg-white/90 backdrop-blur-md border-b border-white/20'
                         : 'bg-transparent'
                 }`}
-                style={{
-                    paddingTop: 'env(safe-area-inset-top)',
-                }}
             >
                 <div className='max-w-7xl mx-auto px-4 py-6'>
                     <div className='flex items-center justify-between'>
