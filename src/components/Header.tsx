@@ -37,11 +37,13 @@ export default function Header() {
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled 
-                    ? 'bg-white/90 backdrop-blur-md border-b border-white/20' 
-                    : 'bg-transparent'
-            }`}>
+            <header
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                    isScrolled
+                        ? 'bg-white/90 backdrop-blur-md border-b border-white/20'
+                        : 'bg-transparent'
+                }`}
+            >
                 <div className='max-w-7xl mx-auto px-4 py-6'>
                     <div className='flex items-center justify-between'>
                         <Link
@@ -84,7 +86,10 @@ export default function Header() {
 
                         <div className='flex items-center space-x-4'>
                             {/* Desktop Buttons */}
-                            <a href='mailto:info@44up.dev' className='hidden sm:block'>
+                            <a
+                                href='mailto:info@44up.dev'
+                                className='hidden sm:block'
+                            >
                                 <Button
                                     variant='outline'
                                     className='bg-transparent border-orange-500 text-orange-500 hover:bg-orange-50 p-2'
@@ -93,9 +98,9 @@ export default function Header() {
                                     <Mail className='h-5 w-5' />
                                 </Button>
                             </a>
-                            <a 
-                                href='https://calendly.com/44up-info/30min' 
-                                target='_blank' 
+                            <a
+                                href='https://calendly.com/44up-info/30min'
+                                target='_blank'
                                 rel='noopener noreferrer'
                                 className='hidden sm:block'
                             >
@@ -135,9 +140,10 @@ export default function Header() {
 
             {/* Mobile Menu Drawer */}
             <div
-                className={`fixed top-0 right-0 h-full w-80 max-w-[85vw] z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden ${
+                className={`fixed top-0 right-0 h-screen w-80 max-w-[85vw] z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden ${
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
+                style={{ height: '100dvh' }}
             >
                 <div className='flex flex-col h-full'>
                     {/* Mobile Menu Header */}
