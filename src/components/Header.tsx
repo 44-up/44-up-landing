@@ -43,6 +43,9 @@ export default function Header() {
                         ? 'bg-white/90 backdrop-blur-md border-b border-white/20'
                         : 'bg-transparent'
                 }`}
+                style={{
+                    paddingTop: 'env(safe-area-inset-top)',
+                }}
             >
                 <div className='max-w-7xl mx-auto px-4 py-6'>
                     <div className='flex items-center justify-between'>
@@ -145,11 +148,12 @@ export default function Header() {
                 }`}
                 style={{
                     height: '100dvh',
+                    maxHeight: '100dvh',
                     paddingTop: 'env(safe-area-inset-top)',
                     paddingBottom: 'env(safe-area-inset-bottom)',
                 }}
             >
-                <div className='flex flex-col flex-1 min-h-0'>
+                <div className='flex flex-col flex-1 min-h-0 overflow-hidden'>
                     {/* Mobile Menu Header */}
                     <div className='flex items-center justify-between p-6 border-b border-gray-200'>
                         <Link href='/' onClick={closeMenu}>

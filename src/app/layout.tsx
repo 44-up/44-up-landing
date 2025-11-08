@@ -38,7 +38,7 @@ export default function RootLayout({
             <head>
                 <meta
                     name='viewport'
-                    content='width=device-width, initial-scale=1'
+                    content='width=device-width, initial-scale=1, viewport-fit=cover'
                 />
                 <link rel='icon' href='/logo.svg' type='image/svg+xml' />
                 <link rel='shortcut icon' href='/logo.svg' />
