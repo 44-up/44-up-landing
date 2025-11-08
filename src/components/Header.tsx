@@ -147,7 +147,7 @@ export default function Header() {
 
             {/* Mobile Menu Overlay */}
             <div
-                className={`fixed inset-0 z-40 md:hidden transition-opacity duration-300 ${
+                className={`fixed inset-0 z-[9998] md:hidden transition-opacity duration-300 ${
                     isMenuOpen
                         ? 'opacity-100 pointer-events-auto'
                         : 'opacity-0 pointer-events-none'
@@ -159,7 +159,7 @@ export default function Header() {
 
             {/* Mobile Menu Drawer */}
             <div
-                className={`fixed top-0 right-0 w-80 max-w-[85vw] z-50 bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden flex flex-col ${
+                className={`fixed top-0 right-0 w-80 max-w-[85vw] z-[9999] bg-white shadow-2xl transform transition-transform duration-300 ease-out md:hidden flex flex-col ${
                     isMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 }`}
                 style={{
