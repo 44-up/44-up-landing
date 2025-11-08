@@ -123,8 +123,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+  }
   body {
     @apply bg-background text-foreground;
+    touch-action: pan-y;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
