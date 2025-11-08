@@ -130,8 +130,8 @@
 }
 
 @layer utilities {
-    .animate-scroll {
+    /* .animate-scroll {
         animation: scroll var(--animation-duration, 40s)
             var(--animation-direction, forwards) linear infinite;
-    }
+    } */
 }
