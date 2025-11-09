@@ -2,7 +2,9 @@ import Header from '@/components/Header';
 import HeroSection from '@/components/HeroSection';
 import CustomSoftwareSection from '@/components/CustomSoftwareSection';
 import AIChatbotSection from '@/components/AIChatbotSection';
-import TestimonialsSection from '@/components/TestimonialsSection';
+// import TestimonialsSection from '@/components/TestimonialsSection';
+import ProcessSection from '@/components/ProcessSection';
+import OnboardingSection from '@/components/OnboardingSection';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -13,7 +15,9 @@ export default function Home() {
                 <HeroSection />
                 <CustomSoftwareSection />
                 <AIChatbotSection />
-                <TestimonialsSection />
+                {/* <TestimonialsSection /> */}
+                <ProcessSection />
+                <OnboardingSection />
             </main>
             <Footer />
         </div>

@@ -81,7 +81,7 @@ export default function Header() {
                 } ${isHeaderVisible ? 'translate-y-0' : '-translate-y-full'}`}
             >
                 <div className='max-w-7xl mx-auto px-4 py-6'>
-                    <div className='flex items-center justify-between'>
+                    <div className='flex items-center justify-between relative'>
                         <Link
                             href='/'
                             className='flex items-center'
@@ -90,8 +90,8 @@ export default function Header() {
                             <Logo size='lg' />
                         </Link>
 
-                        {/* Desktop Navigation */}
-                        <nav className='hidden md:flex items-center space-x-8'>
+                        {/* Desktop Navigation - Centered */}
+                        <nav className='hidden md:flex items-center space-x-8 absolute left-1/2 transform -translate-x-1/2'>
                             <Link
                                 href='/about'
                                 className='text-slate-900 hover:text-slate-700 transition-colors font-medium text-base'
@@ -106,12 +106,6 @@ export default function Header() {
                                     Services
                                 </Link>
                             </div>
-                            <Link
-                                href='/process'
-                                className='text-slate-900 hover:text-slate-700 transition-colors font-medium text-base'
-                            >
-                                Process
-                            </Link>
                             {/* <Link
                                 href='/contact'
                                 className='text-gray-700 hover:text-gray-900 transition-colors font-medium text-base'
@@ -217,13 +211,6 @@ export default function Header() {
                                 className='block px-4 py-3 rounded-lg text-slate-900 hover:bg-slate-50 hover:text-slate-700 transition-all duration-200 font-medium'
                             >
                                 Services
-                            </Link>
-                            <Link
-                                href='/process'
-                                onClick={closeMenu}
-                                className='block px-4 py-3 rounded-lg text-slate-900 hover:bg-slate-50 hover:text-slate-700 transition-all duration-200 font-medium'
-                            >
-                                Process
                             </Link>
                             {/* <Link
                                 href='/contact'
